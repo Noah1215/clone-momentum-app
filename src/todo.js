@@ -21,7 +21,7 @@ function paintToDo(todo) {
   const span = document.createElement("span");
   span.innerHTML = todo.text;
   const button = document.createElement("button");
-  button.innerHTML = "❌";
+  button.innerHTML = "🗑️";
   button.addEventListener("click", deleteTodo);
 
   li.appendChild(span);
@@ -33,6 +33,18 @@ function paintToDo(todo) {
 function handleSubmit(event) {
   event.preventDefault();
   const newTodo = todoInput.value;
+  // if (toDos.length < 8) {
+  //   todoInput.value = "";
+  //   const newTodoObj = {
+  //     text: newTodo,
+  //     id: Date.now(),
+  //   };
+  //   toDos.push(newTodoObj);
+  //   paintToDo(newTodoObj);
+  //   saveTodo();
+  // } else {
+  //   alert("You can not add 'todo' more than 8, delete one!");
+  // }
   todoInput.value = "";
   const newTodoObj = {
     text: newTodo,
