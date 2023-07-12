@@ -1,0 +1,93 @@
+!! what I learned !!
+
+// html
+
+1. required
+- The Boolean required attribute, if present, indicates that the user must specify a value for the input before the owning form can be submitted.
+=> input field must be filled out before submitting the form.
+
+// Javascript
+
+1. Date Objects (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+- Date objects represent a single moment in time in a platform-independent format.
+It encapsulates an integral number that represents milliseconds since the midnight at the beginning of January 1, 1970, UTC.
+=> When called as a constructor, returns the current date and time.
+
+2. why convert 'String' when getting hours,months,seconds.
+- padStart is for string not number. 'padStart' is used to make '01' not just '1'.
+=> In order to use 'padStart()', those should be string after getting time.
+
+3. setInterval() (https://developer.mozilla.org/en-US/docs/Web/API/setInterval)
+- There are many way to call setInterval()
+=> setInterval(func, delay) >> a function to be executed every delay milliseconds.
+=> code can be replaced function, buy not recommended.
+
+4. preventDefault()
+- It prevents the default action of event. the default action of 'submit' is 'refresh' that is why using preventDefault().
+
+5. localStorage(https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+- localStorage data has no expiration time, the stored data is saved across browser sessions.
+- A Storage object which can be used to access the current origin's local storage space.
+
+6. JSON.stringify() (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+- This static method converts a Javascript value to a JSON string.
+
+7. filter()
+- The filter() method creates a shallow copy of a portion of a given array.
+- callback -> a function to execute for each element in the array.
+
+8. why using Date.now()
+- The Date.now() static method returns the number of milliseconds elapsed since the epoch, which is defined as the midnight at the beginning of January 1, 1970, UTC.
+=> todo's unique id is required to specify what todo user clicks
+   Date.now() returns the different number, that is why using Date.now() to specify todo's id.
+
+9. JSON.parse()
+- The JSON.parse() static method parses a JSON string, constructing the JavaScript value or object described by the string.
+- JSON.parse(text) or JSON.parse(text, reviver)
+- text: The string to parse as JSON.
+- reviver(key,value): If a function, this prescribes how each value originally produced by parsing is transformed before being returned.
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
+
+10. Math
+- Math.random() : Returns a pseudo-random number between 0 and 1.
+- Math.floor(x)  : Returns the largest integer less than or equal to x.
+- Math.ceil(x)   : Returns the smallest integer greater than or equal to x.
+
+11. createElement()
+- The document.createElement() method creates the HTML element specified by tagName.
+
+12. appendChild(https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+- The appendChild() method of the Node interface adds a node to the end of the list of children of a specified parent node.
+
+13. navigator.geolocation.getCurrentPosition()
+- The Geolocation.getCurrentPosition() method is used to get the current position of the device.
+- parameters: success, error(optional), options(optional)
+-> success: callback function that takes 'GeolocationPosition' object. Then, it is executed when getCurrentPosition() function takes position.
+-> error: it is executed when getCurrentPosition function doesn't take position.
+
+14. fetch() 
+(https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+(https://www.w3schools.com/jsref/api_fetch.asp)
+(https://www.javascripttutorial.net/javascript-fetch-api/)
+- The Fetch API provides a JavaScript interface for accessing and manipulating parts of the protocol, such as requests and responses.
+- It is used to request data from a server.
+- fetch() method returns a Promise, it can use then() and catch() methods.
+- When the request completes, the promise will resolve into a Response object.
+- .catch handles the error.
+
+//CSS
+
+1. z-index
+(https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)
+- The z-index CSS property sets the z-order of a positioned element and its descendants or flex items.
+- auto: The box does not establish a new local stacking context. The stack level of the generated box in the current stacking context is 0.
+- integer: it is the stack level of the generated box in the current stacking context.
+- -1: negative values to lower the priority
+
+2. ::-webkit-scrollbar
+(https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar)
+- The ::-webkit-scrollbar CSS pseudo-element affects the style of an element's scrollbar when it has overflow:scroll(overflow-y) set.
+
+3. overflow-y: auto
+(https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y)
+- he overflow-y CSS property sets what shows when content overflows a block-level element's top and bottom edges.
